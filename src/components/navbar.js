@@ -18,10 +18,10 @@ const Navbar = () => {
                 <Link className="mt30" to="/hotels"><IosAppsOutline className="cWhite" fontSize="35px" color="#C9C9C9" /></Link>
 
                 {/* NOTIFICATIONS */}
-                <a className="mt30" href="#"><IosMailOutline className="cWhite" fontSize="35px" color="#C9C9C9" /></a>
+                <Link className="mt30" to="/notifications"><IosMailOutline className="cWhite" fontSize="35px" color="#C9C9C9" /></Link>
 
                 {/* PAYMENTS */}
-                <a className="mt30" href="#"><IosCard className="cWhite" fontSize="35px" color="#C9C9C9" /></a>
+                <Link className="mt30" to="/payments"><IosCard className="cWhite" fontSize="35px" color="#C9C9C9" /></Link>
 
             </div>
             <a className="mb10" href="#"><IosExitOutline fontSize="35px" color="#C9C9C9" /></a>

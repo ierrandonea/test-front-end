@@ -3,8 +3,9 @@ const getState = ({ getStore, getActions, setStore }) => {
         store: {
             hotels: null,
             payments: null,
-            notifications: null
-
+            notifications: null,
+            modal: true,
+            Hid: null
         },
         actions: {
             getHotels: () => {
@@ -27,7 +28,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
             getPayments: () => {
                 let store = getStore();
-                fetch(`http://localhost:3001/hotels`, {
+                fetch(`http://localhost:3001/payments`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -45,7 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
             getNotifications: () => {
                 let store = getStore();
-                fetch(`http://localhost:3001/hotels`, {
+                fetch(`http://localhost:3001/notifications`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -60,6 +61,20 @@ const getState = ({ getStore, getActions, setStore }) => {
                     .catch((error) => {
                         console.log(error)
                     });
+            },
+            setModal: (id) =>{
+                let store = getStore();
+                if (store.modal == false) {
+                    setStore({
+                        modal: true,
+                        Hid: id
+                    })
+                } else {                    
+                    setStore({
+                        modal: false,
+                        Hid: null
+                    })
+                }
             }
 
         }

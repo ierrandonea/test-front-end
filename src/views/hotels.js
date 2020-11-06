@@ -5,7 +5,7 @@ import { Context } from '../store/appContext';
 const Hotels = () => {
     const { store, actions } = useContext(Context)
     return (
-        <div className="containerCenter">
+        <div className="containerCenter animate__animated animate__fadeIn">
             <div className="row flex-dir-r w96Porc flex-wrap ">
                 {
                     !!store.hotels &&

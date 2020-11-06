@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/corev2.css'
+
 import App from './App';
+
+import 'animate.css/animate.min.css';
+import './css/corev2.css'
 
 ReactDOM.render(
   <React.StrictMode>
